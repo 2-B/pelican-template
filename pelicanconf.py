@@ -2,21 +2,21 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'admin'
-SITENAME = 'Website'
-SITEURL = 'https://www.example.net'
-TIMEZONE = 'Europe/Zurich'
-DEFAULT_LANG = 'en'
+AUTHOR = u'webmaster'
+SITENAME = u'Website'
+SITEURL = u'https://www.example.net'
+TIMEZONE = u'Europe/Zurich'
+DEFAULT_LANG = u'en'
 DEFAULT_DATE_FORMAT = '%a %d. %B %Y'
 
 # Page path
 PAGE_PATHS = ['pages']
 
 # Sole author and don't use categories ... disable these features
-AUTHOR_SAVE_AS = ''
-AUTHORS_SAVE_AS = ''
-CATEGORY_SAVE_AS = ''
-CATEGORIES_SAVE_AS = ''
+#AUTHOR_SAVE_AS = ''
+#AUTHORS_SAVE_AS = ''
+#CATEGORY_SAVE_AS = ''
+#CATEGORIES_SAVE_AS = ''
 
 # Do not show categories and pages in the menu
 DISPLAY_PAGES_ON_MENU = False
@@ -51,6 +51,11 @@ PLUGINS = []
 BASE_THEME = 'grayround'
 THEME = 'theme'
 STATIC_PATHS = ['images', 'docs']
+
+# Licence
+LICENCE_NAME = 'BY-NC-SA'
+LICENCE_URL = 'http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US'
+LICENCE_URL_IMG = 'http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png'
 
 # Tag cloud
 TAG_CLOUD_STEPS = 4
