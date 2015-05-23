@@ -12,6 +12,10 @@ DEFAULT_DATE_FORMAT = '%a %d. %B %Y'
 # Page path
 PAGE_PATHS = ['pages']
 
+# Menu
+MENUITEMS = (('Menu1', 'menu1.html'),
+             ('Menu2', 'menu2.html'),)
+
 # Sole author and don't use categories ... disable these features
 #AUTHOR_SAVE_AS = ''
 #AUTHORS_SAVE_AS = ''
@@ -48,9 +52,13 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = []
 
 # Theme
-BASE_THEME = 'grayround'
 THEME = 'theme'
-STATIC_PATHS = ['images', 'docs']
+STATIC_PATHS = ['images', 'docs', 'extra/robots.txt', 'extra/favicon.ico']
+PATH_METADATA = 'pages/(?P<path>.*)\..*'
+EXTRA_PATH_METADATA = {
+	'extra/robots.txt': {'path': 'robots.txt'},
+	'extra/favicon.ico': {'path': 'favicon.ico'}
+}
 
 # Licence
 LICENCE_NAME = 'BY-NC-SA'
