@@ -13,8 +13,11 @@ DEFAULT_DATE_FORMAT = '%a %d. %B %Y'
 PAGE_PATHS = ['pages']
 
 # Menu
-MENUITEMS = (('Menu1', 'menu1.html'),
-             ('Menu2', 'menu2.html'),)
+MENUITEMS_PAGE2 = (('Page2.1', 'page2-1.html'),
+                   ('Page2.2', 'page2-2.html'),)
+MENUITEMS = (('Page1', 'page1.html', None),
+             ('Page2', '#', MENUITEMS_PAGE2),
+             ('Page3', 'page3.html', None),)
 
 # Sole author and don't use categories ... disable these features
 #AUTHOR_SAVE_AS = ''

@@ -70,8 +70,19 @@
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 						{% block navigation %}
-						{% for title, link in MENUITEMS %}
+						{% for title, link, SUBMENU in MENUITEMS %}
+						{% if link == "#" %}
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ title }}<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								{% for title, link in SUBMENU %}
+								<li><a href="{{ link }}">{{ title }}</a></li>
+								{% endfor %}
+							</ul>
+						</li>
+						{% else %}
 						<li><a href="{{ link }}">{{ title }}</a></li>
+						{% endif %}
 						{% endfor %}
 						{% if DISPLAY_PAGES_ON_MENU %}
 						<li class="dropdown">
