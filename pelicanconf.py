@@ -22,14 +22,19 @@ MENUITEMS = (('Menu1', 'menu1.html'),
 #CATEGORY_SAVE_AS = ''
 #CATEGORIES_SAVE_AS = ''
 
-# Do not show categories and pages in the menu
+# don't show categories and pages in the menu
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 
 # Feed generation is usually not desired when developing
+FEED_ALL_RSS = None
 FEED_ALL_ATOM = None
+FEED_RSS = 'feeds/rss.xml'
+FEED_ATOM = 'feeds/atom.xml'
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
 
 # URL settings
 # Uncomment following line if you want document-relative URLs when developing
@@ -56,8 +61,8 @@ THEME = 'theme'
 STATIC_PATHS = ['images', 'docs', 'extra/robots.txt', 'extra/favicon.ico']
 PATH_METADATA = 'pages/(?P<path>.*)\..*'
 EXTRA_PATH_METADATA = {
-	'extra/robots.txt': {'path': 'robots.txt'},
-	'extra/favicon.ico': {'path': 'favicon.ico'}
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
 # Licence
