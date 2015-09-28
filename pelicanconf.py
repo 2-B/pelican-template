@@ -34,14 +34,17 @@ DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 
 # Feed generation is usually not desired when developing
-FEED_ALL_RSS = None
-FEED_ALL_ATOM = None
+FEED_DOMAIN = SITEURL
+FEED_ALL_RSS = 'feeds/all.rss.xml'
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
 FEED_RSS = 'feeds/rss.xml'
 FEED_ATOM = 'feeds/atom.xml'
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+TAG_FEED_ATOM = None
+TAG_FEED_RSS = None
 
 # URL settings
 # Uncomment following line if you want document-relative URLs when developing

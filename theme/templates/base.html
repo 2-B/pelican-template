@@ -134,7 +134,16 @@
             <div class="row">
                 {% block footer %}
                 {% block footer_left %}
-                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <a href="/feeds/rss.xml">
+                        <span class="fa fa-rss"></span>
+                        rss
+                    </a>
+                    <a href="/feeds/atom.xml">
+                        <span class="fa fa-feed"></span>
+                        atom
+                    </a>
+                </div>
                 {% endblock footer_left %}
                 {% block footer_middle %}
                 <div class="col-md-4"></div>

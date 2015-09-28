@@ -5,3 +5,10 @@
 {% block content_title %}
                 <h1>Category {{ category }}</h1>
 {% endblock content_title %}
+
+{% block content %}
+{{ super() }}
+            <h2>Follow {{ category }}</h2>
+            <a href="/feeds/{{ category | lower }}.rss.xml"><span class="fa fa-rss"></span>rss</a>
+            <a href="/feeds/{{ category | lower }}.atom.xml"><span class="fa fa-feed"></span>atom</a>
+{% endblock content %}
