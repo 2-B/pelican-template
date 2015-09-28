@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 
+{% block translation %}
+{% import 'translations.html' as translations with context %}
+{{ translations.translations_for(page) }}
+{% endblock %}
+
 {% block content %}
-            <div class="jumbotron">
-                <div class="row">
-                    <div class="col-lg-6 col-lg-offset-3">
-                        <h1 class="text-center">{{ SITENAME }}</h1>
-                    </div>
-                </div>
-            </div>
+{{ page.content }}
 {% endblock %}

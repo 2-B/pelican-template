@@ -6,11 +6,11 @@
 {% if articles %}
     {% for article in articles_page.object_list %}
             <article class="hentry">
-                <h2><a href="{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+                <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
 
                 <div class="entry-content">
                     {{ article.summary }}
-                    <a class="readmore" href="{{ article.url }}">read more</a>
+                    <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
                 </div><!-- /.entry-content -->
             </article>
     {% endfor %}
@@ -22,7 +22,7 @@
     <div>
         <ul>
             {% for page in PAGES %}
-            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
             {% endfor %}
         </ul>
     </div><!-- /.entry-content -->
