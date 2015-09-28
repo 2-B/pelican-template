@@ -11,6 +11,13 @@ DEFAULT_DATE_FORMAT = '%a %d. %B %Y'
 
 # Page path
 PAGE_PATHS = ['pages']
+DIRECT_TEMPLATES = ['news']
+PAGINATED_DIRECT_TEMPLATES = ['news']
+
+# Pagination
+DEFAULT_PAGINATION = 10
+# Have at least 2 articles on the last page
+DEFAULT_ORPHANS = 2
 
 # Menu
 MENUITEMS = (   ('Page1', 'page1.html', None),
