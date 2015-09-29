@@ -11,8 +11,8 @@ DEFAULT_DATE_FORMAT = '%a %d. %B %Y'
 
 # Page path
 PAGE_PATHS = ['pages']
-DIRECT_TEMPLATES = ['categories', 'authors', 'tags', 'archives']
-PAGINATED_DIRECT_TEMPLATES = []
+DIRECT_TEMPLATES = ['news', 'categories', 'authors', 'tags', 'archives']
+PAGINATED_DIRECT_TEMPLATES = ['news']
 
 # Pagination
 DEFAULT_PAGINATION = 10

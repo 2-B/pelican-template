@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+{% if articles %}
+    {% for article in articles_page.object_list %}
+        {% if loop.first %}
+            <h1>News</h1>
+        {% endif %}
+
+        <article class="hentry">
+            <header>
+                <h2><a href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+            </header>
+
+            <div class="entry-content">
+            {{ article.summary }}
+            </div><!-- /.entry-content -->
+        </article>
+
+        {% if loop.last %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+    </body>
+</html>
