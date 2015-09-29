@@ -6,8 +6,7 @@
 .margin-top100 { margin-top: 100px; }
 .margin-top150 { margin-top: 150px; }
 
-@media (min-width: 1200px) {
-  .container{
-    max-width: 860px;
-  }
+.container .jumbotron,
+.container-fluid .jumbotron {
+    margin-top: 40px;
 }
